@@ -3,18 +3,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class gameManager : MonoBehaviour
+public class gameManagement : MonoBehaviour
 {
     bool GameEnded = false;
     public float RestartDelay = 1f;
-    public GameObject CompleteLevelUI;
+   // public GameObject CompleteLevelUI;
 
-    public void CompleteLevel ()
-    {
-        CompleteLevelUI.SetActive(true);
-        
-    }
-
+  
     public void EndGame ()
     {
         if (GameEnded == false)

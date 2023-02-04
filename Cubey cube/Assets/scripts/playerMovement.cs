@@ -19,7 +19,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(0, 0, forwardForce * Time.deltaTime); //non-stoping forward move
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange); //non-stoping forward move
 
         if (Input.GetKey("d"))
         {
@@ -33,7 +33,7 @@ public class playerMovement : MonoBehaviour
 
         if (rb.position.y < -1f)
         {
-            FindObjectOfType<gameManager>().EndGame();
+            FindObjectOfType<gameManagement>().EndGame();
         }
 
     }
